@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --bg-color1: #014656;
+    --bg-color2: #009EA9;
+    --bg-color3: #F8F7F5;
+    --bg-color4: #FAD956;
+    --bg-color5: #F8A602;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+#wrapperleft {
+    width: 80%;
+    float: left;
+    background-color: pink;
+    min-height: 1000px;
+}
+#wrapperright {
+    width: 20%;
+    float: right;
+    background-color: var(--bg-color2);
+    min-height: 1000px;
+}
+#naglowek {
+    background-color: var(--bg-color1);
+    height: 200px;
+    position: relative;
+}
+#menu {
+    background-color: var(--bg-color4);
+    height: 600px;
+    width: 20%;
+    float: left;
+}
+#asidemenu {
+    background-color: var(--bg-color4);
+    height: 600px;
+    width: 10%;
+    float: right;
+}
+#strona {
+    background-color: var(--bg-color5);
+    min-height: 600px;
+    width: 70%;
+    float: left;
+}
+#stopka {
+    background-color: var(--bg-color1);
+    height: 200px;
+    width: 100%;
+    clear: both;
+}
+#main {
+    min-height: 600px;
+}
+#logo {
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin-top: 25px;
+}
+#sidebar {
+    list-style-type: none;
+    text-align: center;
+}
+.textbox {
+    margin: 20px;
+    background-color: var(--bg-color3);
+    padding: 20px;
+    min-height: 100px;
+}
+h1 {
+    text-align: center;
+    padding-top: 50px;
+    margin: 0px auto;
+    font-family: 'Anton', sans-serif;
+    color: var(--bg-color3);
+}
+#textimgleft {
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+#textimgright {
+    height: 100px;
+    width: 100px;
+    float: right;
+}
+.imgsocialright {
+    height: 50px;
+    width: 50px;
+    float: right;
+    margin: 2px;
+}
+.link {
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+.item {
+    margin: 15px 20px;
+    background-color: var(--bg-color3);
+}
+.item:hover {
+    background-color: var(--bg-color2);
+}
+#stopkaleft {
+    float: left;
+    background-color: var(--bg-color2);
+    height: 140px;
+    width: 30%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10%;
+    position: relative;
+}
+#formtext {
+    height: 140px;
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 10%;
+    resize: none;
+}
+.formp {
+    margin: 3px;
+}
+.forminput {
+    margin: 3px;
+    width: calc(100% - 6px);
+}
+#formsend {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+}
+.myicon1 {
+    color: lightblue;
+}
+.myicon2 {
+    color: green;
+}
+#headersidebar {
+    list-style-type: none;
+    float: right;
+    margin-top: 55px;
+}
+.headerlink {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+.headeritem {
+    display: inline-block;
+    margin: 0px 10px;
+    background-color: var(--bg-color3);
+}
+.headeritem:hover {
+    background-color: var(--bg-color2);
+}
