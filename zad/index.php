@@ -21,7 +21,8 @@
                     
                     echo("<table>");
                     while($row = $result->fetch_assoc()) {
-                        echo("<tr><td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>"."<form action='delete.php' method='POST'><input class='invisible' type='text' name='deleteid' value='".$row["id_pracownicy"]."'><input type='submit' value='usun'></td></tr>");
+                        echo("<tr><td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>"."<form action='delete.php' method='POST'>
+                        <input class='invisible' type='text' name='deleteid' value='".$row["id_pracownicy"]."'><input type='submit' value='usun'></form></td></tr>");
                     }
                     echo("</table>");
 
