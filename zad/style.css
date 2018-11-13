@@ -21,6 +21,7 @@ section {
     background: pink;
     flex-basis: 60%;
     height: 70%;
+    overflow: scroll;
 }
 aside {
     background: magenta;
@@ -34,4 +35,10 @@ footer {
 }
 h3 {
     text-align: center;
+}
+table, td {
+    border: 1px solid black;
+}
+table {
+    margin: 5px;
 }
