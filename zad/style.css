@@ -21,7 +21,7 @@ section {
     background: pink;
     flex-basis: 60%;
     height: 70%;
-    overflow: scroll;
+    overflow: auto;
 }
 aside {
     background: magenta;

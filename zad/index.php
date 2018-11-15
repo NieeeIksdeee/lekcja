@@ -53,9 +53,17 @@
             </article>
         </section>
         <aside>
-            <form action="" method="POST">
-                <input type="date" name="date">
-                <input type="submit" value="wyślij date">
+            <form action="insert.php" method="POST">
+                <input type="text" name="imie">
+                <select name="dzial">
+                    <option value="1">serwis</option>
+                    <option value="2">handel</option>
+                    <option value="3">marketing</option>
+                    <option value="4">it</option>
+                </select>
+                <input type="text" name="zarobki">
+                <input type="date" name="data_urodzenia">
+                <input type="submit" value="dodaj pracownika">
             </form>
         </aside>
         <footer>
