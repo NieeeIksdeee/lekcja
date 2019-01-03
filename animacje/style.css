@@ -1,0 +1,124 @@
+@keyframes shot {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: -500px;
+    }
+}
+@keyframes move {
+    0% {
+        left: 100px;
+    }
+    50% {
+        left: 400px;
+    }
+    100% {
+        left: 100px;
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(-30deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+@keyframes roll {
+    0% {
+        top: -20px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+@keyframes backgroundanim {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 0px 512px;
+    }
+}
+.container {
+    position: relative;
+    background-image: url(tlo.png);
+    animation: backgroundanim 2s infinite linear;
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+}
+.container:hover {
+    animation: backgroundanim 1s infinite linear;
+}
+.main {
+    background: lightgreen;
+    position: absolute;
+    top: 400px;
+    left: 300px;
+    width: 50px;
+    height: 60px;
+    animation: move 3s infinite;
+}
+.wheel {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 10px;
+}
+.wheelorigin {
+    top: -20px;
+    animation: roll 1s infinite linear;
+}
+.wheeldiv1 {
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 10px;
+    height: 50px;
+    overflow: hidden;
+}
+.wheeldiv2 {
+    position: absolute;
+    left: 50px;
+    top: 5px;
+    width: 10px;
+    height: 50px;
+    overflow: hidden;
+}
+.wheel1 {
+    background: blue;
+}
+.wheel2 {
+    background: skyblue;
+}
+.turret {
+    position: absolute;
+    background: green;
+    height: 40px;
+    width: 40px;
+    top: 15px;
+    left: 5px;
+    border-radius: 20px;
+    animation: rotate 4s infinite;
+}
+.cannon {
+    position: absolute;
+    height: 40px;
+    width: 10px;
+    background: green;
+    left: 15px;
+    top: -20px;
+}
+.bullet {
+    position: absolute;
+    background: gold;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    animation: shot 1s infinite linear;
+}
