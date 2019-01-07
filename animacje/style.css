@@ -59,6 +59,11 @@
 .container:hover {
     animation: backgroundanim 1s infinite linear;
 }
+.btnControl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .btnLeft {
     background: blue;
     position: absolute;
