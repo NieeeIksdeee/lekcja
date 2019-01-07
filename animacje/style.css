@@ -6,15 +6,20 @@
         top: -500px;
     }
 }
-@keyframes move {
+@keyframes moveLeft {
     0% {
-        left: 100px;
-    }
-    50% {
-        left: 400px;
+        left: 232px;
     }
     100% {
-        left: 100px;
+        left: 135px;
+    }
+}
+@keyframes moveRight {
+    0% {
+        left: 232px;
+    }
+    100% {
+        left: 330px;
     }
 }
 @keyframes rotate {
@@ -30,10 +35,10 @@
 }
 @keyframes roll {
     0% {
-        top: -20px;
+        top: 0px;
     }
     100% {
-        top: 0px;
+        top: -20px;
     }
 }
 @keyframes backgroundanim {
@@ -50,19 +55,41 @@
     animation: backgroundanim 2s infinite linear;
     height: 500px;
     width: 500px;
-    overflow: hidden;
 }
 .container:hover {
     animation: backgroundanim 1s infinite linear;
+}
+.btnLeft {
+    background: blue;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 550px;
+    left: 200px;
+}
+.btnRight {
+    background: red;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 550px;
+    left: 250px;
+}
+.btnLeft:hover ~ .container .main {
+    animation: moveLeft 1s 1;
+    left: 135px;
+}
+.btnRight:hover ~ .container .main {
+    animation: moveRight 1s 1;
+    left: 330px;
 }
 .main {
     background: lightgreen;
     position: absolute;
     top: 400px;
-    left: 300px;
+    left: 232px;
     width: 50px;
     height: 60px;
-    animation: move 3s infinite;
 }
 .wheel {
     position: absolute;
