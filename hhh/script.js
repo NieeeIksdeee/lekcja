@@ -1,6 +1,6 @@
 const ListaToDo = {
-    mainDiv: document.querySelector(".mainDiv"),
-    input: document.querySelector(".tekst"),
+    mainDiv: document.getElementById("mainDiv"),
+    input: document.getElementById("tekst"),
     guzik: document.getElementById("button"),
 
     dodajDoListy: function() {
@@ -11,4 +11,5 @@ const ListaToDo = {
     }
 }
 
-ListaToDo.guzik.addEventListener("click", ListaToDo.dodajDoListy());
+ListaToDo.guzik.addEventListener('click', ListaToDo.dodajDoListy());
+
