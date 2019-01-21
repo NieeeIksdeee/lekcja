@@ -18,18 +18,28 @@
 // AmojObiekt.test();
 
 //zad3
-var osoba = {
+var imie = "ojeju";
+function powitanie() {
+    console.log("Witam o nie: " + this.imie);
+}
+
+var auto = {
     imie: "Jan",
     nazwisko: "Kowalski",
     powitanie: function() {
-        console.log("Witam: " + osoba.imie);
+        console.log("Witam: " + this.imie);
     },
     setImie: function(newName) {
-        osoba.imie = newName;
+        this.imie = newName;
+    },
+    init: function() {
+        powitanie();
+        this.powitanie();
     }
 }
 
-console.log(osoba);
-osoba.powitanie();
-osoba.setImie("Paweł");
-osoba.powitanie();
+console.log(auto);
+auto.setImie("Paweł");
+auto.powitanie();
+
+auto.init();
