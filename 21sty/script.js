@@ -18,28 +18,42 @@
 // AmojObiekt.test();
 
 //zad3
-var imie = "ojeju";
-function powitanie() {
-    console.log("Witam o nie: " + this.imie);
-}
+// var imie = "ojeju";
+// function powitanie() {
+//     console.log("Witam o nie: " + this.imie);
+// }
+
+// var auto = {
+//     imie: "Jan",
+//     nazwisko: "Kowalski",
+//     powitanie: function() {
+//         console.log("Witam: " + this.imie);
+//     },
+//     setImie: function(newName) {
+//         this.imie = newName;
+//     },
+//     init: function() {
+//         powitanie();
+//         this.powitanie();
+//     }
+// }
 
 var auto = {
-    imie: "Jan",
-    nazwisko: "Kowalski",
+    imie: "Paweł",
+    paliwo: "benzyna",
+    predkosc: 0,
     powitanie: function() {
         console.log("Witam: " + this.imie);
     },
-    setImie: function(newName) {
-        this.imie = newName;
+    zmienPredkosc: function(newSpeed) {
+        this.predkosc = newSpeed;
     },
-    init: function() {
-        powitanie();
+    wyswietlPredkosc: function() {
+        console.log(this.predkosc);
+    },
+    init: function(speed) {
         this.powitanie();
+        this.zmienPredkosc(speed);
+        this.wyswietlPredkosc();
     }
 }
-
-console.log(auto);
-auto.setImie("Paweł");
-auto.powitanie();
-
-auto.init();
