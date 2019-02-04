@@ -1,0 +1,42 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.main{
+    background-color: lightskyblue;
+    height: 100vh;
+    width: 100%;
+}
+.input{
+    background-color: whitesmoke;
+}
+.list{
+    height: 100vh;
+    width: 100%;
+}
+.kid{
+    background-color: #bfb0cc;
+    padding: 5px;
+    margin: 5px;
+}
+.kide{
+    background-color: lightcoral;
+    padding: 5px;
+    margin: 5px;
+}
+.kidew{
+    background-color: lightcyan;
+    padding: 5px;
+    margin: 5px;
+}
+.kidews{
+    background-color: lightgreen;
+    padding: 5px;
+    margin: 5px;
+}
+.aContainer{
+    
+    padding: 5px;
+    margin: 5px;
+    
+}
