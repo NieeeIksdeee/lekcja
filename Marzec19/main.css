@@ -1,0 +1,47 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+.main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.a{
+    height: 100vh;
+    width: 20%;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.b{
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.b1{
+    height: 50vh;
+    width: 100%;
+    background: lightcoral;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.b2{
+    height: 50vh;
+    width: 100%;
+    background: blueviolet;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+tr:hover td{
+    background-color: lightseagreen;
+}
