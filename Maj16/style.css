@@ -1,0 +1,21 @@
+body{
+    background: black;
+}
+@keyframes scrollBg{
+    from{
+        background-position-y: 0px;
+    }
+    to{
+        background-position-y: 720px;
+    }
+}
+.game{
+    height: 720px;
+    width: 1028px;
+    background: url("background-space.png");
+    animation: scrollBg 5s linear infinite;
+.game .player{
+    position: absolute;
+    margin: 0 0 0 -20px;
+    width: 40px;
+}
