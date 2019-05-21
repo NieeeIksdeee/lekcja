@@ -1,9 +1,13 @@
 body{
+    height: 100vh;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: black;
+    background: url("background.jpg");
 }
 @keyframes scrollBg{
     from{
@@ -18,8 +22,24 @@ body{
     width: 1028px;
     background: url("background-blue.png");
     animation: scrollBg 5s linear infinite;
+    overflow: hidden;
+    position: relative;
+    border: solid 1px gray;
+   
+}
 .game .player{
     position: absolute;
     margin: 0 0 0 -20px;
     width: 40px;
+}
+.laser{
+    position: absolute;
+    margin: 0 0 0 -5px;
+    width: 10px;
+    height: 25px;
+}
+.enemy{
+    height: 50px;
+    width: 50px;
+    
 }
