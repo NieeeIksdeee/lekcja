@@ -1,0 +1,64 @@
+body{
+    height: 100vh;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: url("background.jpg");
+}
+
+@keyframes scrollBg{
+    from{
+       background-position-y: 0px
+    }to{
+        background-position-y: 256px
+    }
+}
+
+.game {
+    width: 640px;
+    height: 480px;
+    background:url('images/background-blue.png');
+	animation: scrollBg 5s linear infinite;
+	position: relative;
+    display:flex;
+    border-style: solid 1px gray;
+}
+
+.game-over{
+	display: block;
+	color: red;
+	
+	font-size: 3rem;
+	background: white;
+	padding: 1rem;
+	/*z-index: 2;*/
+	margin: auto;
+}
+
+.game .player{
+    position: absolute;
+    margin: 0 0 0 -20px;
+    width: 40px; 
+}
+
+.game .laser{
+    position: absolute;
+    margin: 0 0 0 -5px;
+    width: 10px; 
+} 
+
+.game .enemy{
+    position: absolute;
+    margin: 0 0 0 -20px;
+    width: 40px; 
+} 
+
+.game .enemy-laser{
+    position: absolute;
+    margin: 0 0 0 -5px;
+    width: 10px; 
+} 

@@ -18,6 +18,12 @@ export const GAME_STATE = {
     playerY: 0,
     lasers: [],
     enemies: [],
+    enemyLasers: [],
+	score: 0,
+	armor: 0,
+	gameOver: false,
+
+};
 }
 export const $container = document.querySelector(".game");
 export const $playerDOM = document.createElement("img");
