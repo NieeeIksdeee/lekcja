@@ -1,0 +1,62 @@
+*{
+
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 50vh; 
+    --textColor: #251E25;
+    --primaryColor:rgb(122, 122, 122);
+    --secondaryColor:#52FFEE;
+    --activeColor:#FB4D3D;
+}
+.tabs{
+    border: 1px dashed red;
+    height: 50vh;
+    color: var(--textColor);
+}
+
+.tabs__sidebar{
+    height:10%;
+    display: flex;
+}
+
+
+.tabs__btn {
+    background:var(--primaryColor);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    flex:15% 0 1;  
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.tabs__content{
+    background: var(--secondaryColor);
+    display: none;
+    padding: 2rem;
+
+}
+
+.tabs__content--active{
+    display: block;
+    height:90%;
+}
+
+.tabs__btn--active{
+    background: var(--secondaryColor);
+}
+.tabBtn__deleteTab{
+    height: 40px;
+    width: 40px;
+    background-image:url("minus.png");
+    background-size: 40px 40px;
+}
+
+
+.tabs__btn--active, .tabs__content--active {
+    background:lightgreen;
+}
