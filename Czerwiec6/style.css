@@ -4,15 +4,33 @@
 }
 
 html, body {
-    height: 50vh; 
+    height: 100vh;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
     --textColor: #251E25;
     --primaryColor:rgb(122, 122, 122);
     --secondaryColor:#52FFEE;
     --activeColor:#FB4D3D;
 }
+.main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #9c92a3;
+}
+.header{
+    height: 10%;
+    width: 100%;
+    background-color: rgb(169, 149, 197);
+}
 .tabs{
-    border: 1px dashed red;
-    height: 50vh;
+    height: 40%;
+    width: 80%;
     color: var(--textColor);
 }
 
@@ -30,7 +48,7 @@ html, body {
     height: 100%;
     flex:15% 0 1;  
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center; 
 }
 
@@ -38,7 +56,7 @@ html, body {
     background: var(--secondaryColor);
     display: none;
     padding: 2rem;
-
+    border-radius: 0px 0px 10px 10px;
 }
 
 .tabs__content--active{
@@ -50,13 +68,33 @@ html, body {
     background: var(--secondaryColor);
 }
 .tabBtn__deleteTab{
-    height: 40px;
-    width: 40px;
+    height: 20px;
+    width: 20px;
     background-image:url("minus.png");
-    background-size: 40px 40px;
+    background-size: 20px 20px;
 }
 
 
 .tabs__btn--active, .tabs__content--active {
-    background:lightgreen;
+    background: #d4c2fc;
+}
+.tabs__addBtn{
+    background-color: #d4c2fc;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 10px 0px 0px 0px;
+}
+.btn{
+    height: 20px;
+    width: 20px;
+}
+.img{
+    height: 20px;
+    width: 20px;
 }

@@ -8,33 +8,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="tabs">
-		
-		<div class="tabs__sidebar">
-			<button class="tabs__addBtn">+</button>
-			<button class="tabs__btn tabs__btn--active tabBtn" data-tab-nr="1">Tab1
-				<span class="tabBtn__deleteTab">X</span>
-			</button>
-            <button class="tabs__btn tabBtn" data-tab-nr="2">Tab2
-				<span class="tabBtn__deleteTab">X</span>
-			</button>
-            <button class="tabs__btn tabBtn" data-tab-nr="3">Tab3
-				<span class="tabBtn__deleteTab">X</span>
-			</button>
+    <div class="main">
+        <div class="header">
+
         </div>
-        <div class="tabs__content tabs__content--active" data-content-nr="1">
-            asd1
+        <div class="tabs">	
+            <div class="tabs__sidebar">
+                <button class="tabs__addBtn">
+                    <div class="btn">
+                        <img src="plus.png" class="img">
+                    </div>
+                </button>
+                <button class="tabs__btn tabs__btn--active tabBtn" data-tab-nr="1">Tab1
+                    <span class="tabBtn__deleteTab"></span>
+                </button>
+                <button class="tabs__btn tabBtn" data-tab-nr="2">Tab2
+                    <span class="tabBtn__deleteTab"></span>
+                </button>
+                <button class="tabs__btn tabBtn" data-tab-nr="3">Tab3
+                    <span class="tabBtn__deleteTab"></span>
+                </button>
+            </div>
+            <div class="tabs__content tabs__content--active" data-content-nr="1">
+                asd1
+            </div>
+            <div class="tabs__content" data-content-nr="2">
+                asd2
+            </div>
+            <div class="tabs__content" data-content-nr="3">
+                asd3
+            </div>
         </div>
-        <div class="tabs__content" data-content-nr="2">
-            asd2
-        </div>
-        <div class="tabs__content" data-content-nr="3">
-            asd3
-		</div>
-    </div>
-    <div class="xd">
-        fdsfsd
-    </div>
+        
+    </div> 
 </body>
 <script src="main.js"></script>
 
