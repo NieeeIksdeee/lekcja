@@ -64,7 +64,7 @@ function updateDeleteBtn() {
 function addNewTab(tabSidebar){
    let last = parseInt([...getSideBar().children].pop().dataset.tabNr);   
    console.log(getSideBar().children);
-	let newButton = document.createElement('button');
+	let newButton = document.createElement('div');
     tabSidebar.appendChild(newButton);
     newButton.innerText = `Tabs ${last+1}`;
     newButton.classList.add("tabs__btn");

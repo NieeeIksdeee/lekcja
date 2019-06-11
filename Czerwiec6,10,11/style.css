@@ -27,6 +27,11 @@ html, body {
     height: 10%;
     width: 100%;
     background-color: rgb(169, 149, 197);
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    font-size: 40px;
+    color: #d4c2fc;
 }
 .tabs{
     height: 40%;
@@ -50,6 +55,10 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center; 
+    padding: 5px;
+}
+.tabs__btn:hover{
+    background:#c1b0e4;   
 }
 
 .tabs__content{
@@ -72,6 +81,9 @@ html, body {
     width: 20px;
     background-image:url("minus.png");
     background-size: 20px 20px;
+}
+.tabs__addBtn:hover{
+    background:#c1b0e4;   
 }
 
 
@@ -98,3 +110,62 @@ html, body {
     height: 20px;
     width: 20px;
 }
+
+html, body, label {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  label {
+    font-size: 48px;
+    user-select: none;
+  }
+  label span {
+    display: flex;
+  }
+  label span span {
+    display: block;
+    overflow: hidden;
+  }
+  label span span:nth-child(3), label span span:nth-child(5) {
+    transform-origin: center left;
+    transform: rotate(90deg);
+  }
+  label span span:nth-child(6) {
+    width: 0px;
+  }
+  label span input[type="checkbox"] {
+    display: none;
+  }
+  label span input[type="checkbox"]:checked ~ span:nth-child(3), label span input[type="checkbox"]:checked ~ span:nth-child(5) {
+    transform: rotate(0deg);
+    transition: transform 300ms ease-out;
+  }
+  label span input[type="checkbox"]:checked ~ span:nth-child(6) {
+    width: 48px;
+    transition: width 300ms ease-out;
+  }
+  label span input[type="checkbox"]:checked ~ span:nth-child(7) {
+    animation: flippy-table 1000ms linear forwards;
+  }
+  
+  @keyframes flippy-table {
+    0% {
+      transform: translateY(0%);
+    }
+    50% {
+      transform: translateY(-200%) rotate(270deg);
+    }
+    100% {
+      transform: translateY(0%) rotate(540deg);
+    }
+  }
+  
