@@ -1,0 +1,61 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+*{
+    box-sizing: border-box;
+}
+.header-item{
+    background: lightblue;
+    height: 50px;
+    width: 100px;
+    margin: 5px;
+}
+.sidebar-item{
+    background: lightblue;
+    height: 50px;
+    width: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.logo{
+    margin-right: auto;
+    height: 166px;
+    width: 201px;
+    background: url("path3340.png");
+}
+.a{
+    grid-area: header;
+    background: #9a4c95;
+    display: flex;
+    align-items: flex-end;
+}
+.b{
+    grid-area: main;
+    background: #f0d3f7;
+}
+.c{
+    grid-area: sidebar;
+    background: #b47eb3;
+}
+.ca{
+    grid-area: sidebara;
+    background: #b47eb3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.d{
+    grid-area: footer;
+    background: #b7adcf;
+}
+.container{
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-areas:
+        "header header header"
+        "sidebara main sidebar"
+        "footer footer footer";
+}
