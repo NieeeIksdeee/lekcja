@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.card{
+    width: 100%;
+    height: 30vh;
+    background: lightblue;
+    position: relative;
+    font-size: 15px;
+    color: white;
+}
+.photo{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 16vh;
+}
+.info{
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;  
+}
+.price{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    text-align: right;
+}
+.size{
+    position:absolute;
+    width: 100%;
+    top: 80;
+    text-align: right;
+}
+.list{
+    list-style-type: none;
+}
+.title{
+    position: absolute;
+    top: 150;  
+    text-shadow: 0px 4px 8px rgba(150, 150, 150, 1);
+}
+.description{
+    position: absolute;
+    top: 175;
+    text-shadow: 0px 4px 8px rgba(150, 150, 150, 1);
+}
+.more{
+    position: absolute;
+    top: 265;
+}
+.buy-now{
+    position: absolute;
+    top: 265;
+    left: 60;
+}
+.promo{
+    position:absolute;
+    width: 100%;
+    top: 2rem;
+    left: 0;
+    text-align: right;
+}
+.header{
+    grid-area: header;
+    background: lightskyblue;
+}
+.sidebar{
+    grid-area: sidebar;
+    background: lightslategray;
+}
+.item1{ 
+}
+.item2{
+
+}
+.item3{
+
+}
+.footer{
+    grid-area: footer;
+    background: rgb(69, 96, 121);
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 5px;
+    grid-template-areas: 
+        "header header header header"
+        "sidebar item1 item2 item3"
+        "sidebar item4 item5 item6"
+        "sidebar item7 item8 item9"
+        "sidebar item10 item11 item12"
+        "footer footer footer footer";
+}
