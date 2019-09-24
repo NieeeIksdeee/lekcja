@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" class="css">
 </head>
 <body>
+<h1>INDEX4</h1>
 <div class="menu">
         <a href="index.php" class="a">
             <div class="btn">

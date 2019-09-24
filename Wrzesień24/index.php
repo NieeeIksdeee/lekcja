@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" class="css">
 </head>
 <body>
+    <h1>INDEX</h1>
     <div class="menu">
         <a href="index.php" class="a">
             <div class="btn">
@@ -40,10 +41,14 @@
             <input type="text" name="haslo"><br/>
             <input type="submit" value="Zaloguj">
         </form>
-        <?php
-        require('login.php');
-    ?>
+        
     </div>
     
 </body>
 </html>
+    <?php
+        session_start();
+        if(isset($_GET['akcja']) && $_GET['akcja']=="wyloguj"){
+            unset($_SESSION['Zalogowany']);
+        }
+    ?>
