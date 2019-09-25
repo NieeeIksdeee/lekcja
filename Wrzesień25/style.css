@@ -1,0 +1,73 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.btn{
+    height: 50px;
+    width: 200px;
+    margin: 10px;
+    background: gray;
+    border-radius: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.btn:hover{
+    background: rgb(88, 88, 88);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.sidebar{
+    padding: 50px;
+    background: green;
+    grid-area: sidebar;
+    text-align: center;
+}
+.header{
+    background: orange;
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+.main{
+    background: gray;
+    grid-area: main;
+    text-align: center;
+}
+
+.green{
+    height: 200px;
+    width: 200px;
+    background: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.red{
+    height: 200px;
+    width: 200px;
+    background: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-auto-rows: 50% 50%;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main"
+        
+}
