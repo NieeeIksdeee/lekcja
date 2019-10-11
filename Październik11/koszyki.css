@@ -1,0 +1,47 @@
+body{
+    height: 100vh;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    width: 80%;
+    color: salmon;
+}
+.button{
+    background: mediumslateblue;
+    padding: 5px;
+    margin: 5px;
+}
+.button:hover{
+    background: fuchsia;
+}
+.sidebara{
+    background: violet;
+    grid-area: sidebara;
+}
+
+.sidebarb{
+    background: crimson;
+    grid-area: sidebarb;
+}
+
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+        "sidebara sidebarb"
+        
+}
