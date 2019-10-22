@@ -1,8 +1,8 @@
 <?php
     class Calculator{
         public $dzialanie;
-        public $liczba1;
-        public $liczba2;
+        public $num1;
+        public $num2;
 
         public function __constructor($a,$b,$c){
             echo '<li>Info z KONSTRUKTORA KLASY: ';
@@ -10,8 +10,9 @@
         }
         public function obliczenia(){
             echo '<li> Obliczamy';
-            if($this->dzialanie == 'suma'){
-                echo '<li>Suma:'.($num1 + $num2);
+            switch($this->dzialanie){
+                case 'suma':
+                    echo'<li>suma:'.($this->num1 + $this->num2);
             }
         }
     }
