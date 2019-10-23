@@ -23,18 +23,32 @@ img{
 img:hover{
     filter:invert(70%);
 }
-.sidebar{
-    background: #9999C3;
-    grid-area: sidebar;
-    border-top: 5px solid white;
-   
-}
+
 .main{
     background: rgb(171, 156, 207);
     grid-area: main;
     border: 5px solid white;
-    border-radius: 0px 0px 0px 100px;
+    border-radius: 0px 0px 100px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     
+}
+input{
+    height: 20px;
+    width: 200px;
+    margin: 1px;
+    text-align: center;
+    border: none;
+    background: white;
+    color: gray;
+}
+input:hover{
+    filter: invert(25%);
+}
+.submit{
+    border-radius: 0px 0px 10px 10px;
 }
 
 .footer{
@@ -52,7 +66,7 @@ img:hover{
     grid-auto-columns: 15% 85%;
     grid-template-areas: 
         "header header"
-        "sidebar main"
+        "main main"
         "footer footer";
 }
 a{
