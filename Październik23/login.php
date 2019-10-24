@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(isset($_GET['Akcja']) && $_GET['Akcja'] == "Wyloguj"){
+        unset($_SESSION['Zalogowany']);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +18,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <a href="index.html">
+            <a href="login.html">
                 <img src="bibl_logo.png">
                 
             </a>
@@ -20,7 +26,7 @@
         <div class="main">
             <form action="index.php" method="POST">
                 <input type="text" name="login" placeholder="Login"><br/>
-                <input type="text" name="login" placeholder="Hasło"><br/>
+                <input type="password" name="password" placeholder="Hasło"><br/>
                 <input type="submit" value="Zaloguj" class="submit">
             </form>
         </div>

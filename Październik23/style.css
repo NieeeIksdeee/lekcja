@@ -5,6 +5,8 @@ body{
     width: 100%;
     background: #9999C3;
     color: white;
+    text-align: center;
+    font-family: "Ubuntu Condensed";
 }
 .header{
     background: #8E88C8;
@@ -49,7 +51,7 @@ img:hover{
     height: 100%;
     width: 100%;
     grid-template-rows: 20% 77% 3%;
-    grid-auto-columns: 15% 85%;
+    grid-template-columns: 15% 85%;
     grid-template-areas: 
         "header header"
         "sidebar main"
@@ -63,7 +65,13 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 }
+.sidebar a{
+    border: solid white 1px;
+    margin: 2px;
+    border-radius: 10px;
+} 
 a:hover{
     filter:invert(70%);
 }
