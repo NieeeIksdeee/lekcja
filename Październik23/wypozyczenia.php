@@ -44,22 +44,34 @@
             </a>
         </div>
         <div class="main">
+            <h1>Wypożyczenia!</h1>
+            
         <?php
             require("conn.php");
             
             if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] = 1){
-                echo("<h1>Autorzy!</h1>");
-                $sql = "SELECT * FROM bibl_authors";
+                
+                $sql = "SELECT title FROM bibl_books,bibl_titles WHERE bibl_books.id_titles=bibl_titles.id_titles";
                 $result = $conn -> query($sql);
+                echo("<form>");
+                echo("<select>");
+                    while($row = $result -> fetch_assoc()){
+                        echo("<option>".$row['title']."</option>");
+                    }
+                echo("</select>");
+                echo("</form>");
                 echo("<table border='1px'>
                         <tr>
-                            <th>id_authors</th>
-                            <th>name</th>
+                            <th>id_checkouts</th>
+                            <th>title</th>
+                            <th>login</th>
+                            <th>password</th>
+                            <th>date_in</th>
+                            <th>date_out</th>
                         </tr>
                 ");
-                
                 while($row = $result -> fetch_assoc()){
-                    echo("<tr><td>".$row['id_authors']."</td><td>".$row['name']."</td></tr>");
+                    echo("<tr><td>".$row['id_checkouts']."</td><td>".$row['title']."</td><td>".$row['login']."</td><td>".$row['password']."</td><td>".$row['date_in']."</td><td>".$row['date_out']."</td></tr>");
                 }
                 echo("</table>");
             }

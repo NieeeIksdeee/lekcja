@@ -48,18 +48,17 @@
             require("conn.php");
             
             if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] = 1){
-                echo("<h1>Autorzy!</h1>");
-                $sql = "SELECT * FROM bibl_authors";
+                echo("<h1>Książki!</h1>");
+                $sql = "SELECT * FROM bibl_titles";
                 $result = $conn -> query($sql);
                 echo("<table border='1px'>
                         <tr>
-                            <th>id_authors</th>
-                            <th>name</th>
+                            <th>id_titles</th>
+                            <th>title</th>
                         </tr>
                 ");
-                
                 while($row = $result -> fetch_assoc()){
-                    echo("<tr><td>".$row['id_authors']."</td><td>".$row['name']."</td></tr>");
+                    echo("<tr><td>".$row['id_titles']."</td><td>".$row['title']."</td></tr>");
                 }
                 echo("</table>");
             }
