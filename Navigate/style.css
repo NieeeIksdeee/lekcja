@@ -1,0 +1,111 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+    width: 100%;
+    background: #9999C3;
+    color: white;
+}
+.header{
+    background: #8E88C8;
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid white;
+}
+
+img{
+    height: 150px;
+    width: 282px;
+    filter:invert(100%)
+}
+img:hover{
+    filter:invert(70%);
+}
+
+.main{
+    background: rgb(171, 156, 207);
+    grid-area: main;
+    border: 5px solid white;
+    border-radius: 0px 0px 100px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.menu-triangle{
+    position: relative;
+}
+.triangle{
+    height: 200px;
+    width: 200px;
+    filter:invert(0%);
+}
+.first{
+    position: absolute;
+    top: -86px;
+}
+.second{
+    position: absolute;
+    top: 90px;
+    left: -104px;
+}
+.third{
+    position: absolute;
+    top: 90px;
+    transform: rotate(180deg);
+}
+.fourth{
+    position: absolute;
+    top: 90px;
+    left: 104px;
+}
+input{
+    height: 20px;
+    width: 200px;
+    margin: 1px;
+    text-align: center;
+    border: none;
+    background: white;
+    color: gray;
+}
+input:hover{
+    filter: invert(25%);
+}
+.submit{
+    border-radius: 0px 0px 10px 10px;
+}
+
+.footer{
+    background: #9999C3;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: 20% 77% 3%;
+    grid-auto-columns: 15% 85%;
+    grid-template-areas: 
+        "header header"
+        "main main"
+        "footer footer";
+}
+a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.area:hover{
+    filter:invert(70%);
+}
+
+
