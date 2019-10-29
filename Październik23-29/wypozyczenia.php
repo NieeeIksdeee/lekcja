@@ -50,16 +50,36 @@
             require("conn.php");
             
             if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] = 1){
-                
-                $sql = "SELECT title FROM bibl_books,bibl_titles WHERE bibl_books.id_titles=bibl_titles.id_titles";
+                $sql = "SELECT * FROM bibl_books,bibl_titles,bibl_checkouts,bibl_users WHERE bibl_books.id_titles=bibl_titles.id_titles && bibl_checkouts.id_users=bibl_users.id_users && bibl_checkouts.id_books=bibl_books.id_books";
                 $result = $conn -> query($sql);
-                echo("<form>");
-                echo("<select>");
-                    while($row = $result -> fetch_assoc()){
-                        echo("<option>".$row['title']."</option>");
-                    }
-                echo("</select>");
+
+                $sqla = "SELECT * FROM bibl_books,bibl_titles WHERE bibl_books.id_titles=bibl_titles.id_titles";
+                $resulta = $conn -> query($sqla);
+
+                $sqlb = "SELECT * FROM bibl_users";
+                $resultb = $conn -> query($sqlb);
+
+                echo("<form method='POST' action='insert.php'>");
+                
+                    echo("Książka: <select name='book'>");
+                        while($row = $resulta -> fetch_assoc()){
+                            $a++;
+                            echo("<option value='".$row['id_titles']."'>".$row['title']."</option>");
+                        }
+                    echo("</select>");
+
+                    echo("Użytkownik: <select name='user'>");
+                        while($row = $resultb -> fetch_assoc()){
+                            echo("<option value='".$row['id_users']."'>".$row['login']."</option>");
+                        }
+                    echo("</select>");
+
+                    echo("Data przyjęcia<input type='date' name='in'>");
+                    echo("Data zwrotu<input type='date' name='out'>");
+                    echo("<br/><input type='submit' value='Wypożycz'>");
+
                 echo("</form>");
+
                 echo("<table border='1px'>
                         <tr>
                             <th>id_checkouts</th>
