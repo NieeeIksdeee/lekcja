@@ -88,10 +88,18 @@
                             <th>password</th>
                             <th>date_in</th>
                             <th>date_out</th>
+                            <th>-</th>
                         </tr>
                 ");
                 while($row = $result -> fetch_assoc()){
-                    echo("<tr><td>".$row['id_checkouts']."</td><td>".$row['title']."</td><td>".$row['login']."</td><td>".$row['password']."</td><td>".$row['date_in']."</td><td>".$row['date_out']."</td></tr>");
+                    echo("<tr><td>".$row['id_checkouts']."</td><td>".$row['title']."</td><td>".$row['login']."</td><td>".$row['password']."</td><td>".$row['date_in']."</td><td>".$row['date_out']."</td><td><form action='delete.php' method='POST'>
+                    <input value='".$row['id_checkouts']."' type='text' name='delete' hidden>
+                    <input class='delete' type='submit' value='Zwróć'>
+                    </form></td></tr>");
+                    $earlier = new DateTime('"'.$row['date_in'].'"');
+                    $later = new DateTime('"'.$row['date_out'].'"');
+
+                    $diff = $later->diff($earlier)->format("%a");
                 }
                 echo("</table>");
             }

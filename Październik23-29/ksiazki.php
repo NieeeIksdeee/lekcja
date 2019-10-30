@@ -49,16 +49,26 @@
             
             if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] = 1){
                 echo("<h1>Książki!</h1>");
+
                 $sql = "SELECT * FROM bibl_titles";
                 $result = $conn -> query($sql);
+
+                echo("<form method='POST' action='insert_title.php'>
+                    <input placeholder='Podaj tytuł' type='text' name='title'>
+                    <input type='submit' value='Dodaj'>
+                </form>");
                 echo("<table border='1px'>
                         <tr>
                             <th>id_titles</th>
                             <th>title</th>
+                            <th>-</th>
                         </tr>
                 ");
                 while($row = $result -> fetch_assoc()){
-                    echo("<tr><td>".$row['id_titles']."</td><td>".$row['title']."</td></tr>");
+                    echo("<tr><td>".$row['id_titles']."</td><td>".$row['title']."</td><td><form action='delete_title.php' method='POST'>
+                    <input value='".$row['id_titles']."' type='text' name='delete_title' hidden>
+                    <input class='delete' type='submit' value='Usuń'>
+                    </form></td></tr>");
                 }
                 echo("</table>");
             }

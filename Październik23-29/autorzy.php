@@ -51,15 +51,23 @@
                 echo("<h1>Autorzy!</h1>");
                 $sql = "SELECT * FROM bibl_authors";
                 $result = $conn -> query($sql);
+                echo("<form method='POST' action='insert_author.php'>
+                <input placeholder='Podaj autora' type='text' name='author'>
+                <input type='submit' value='Dodaj'>
+                </form>");
                 echo("<table border='1px'>
                         <tr>
                             <th>id_authors</th>
                             <th>name</th>
+                            <th>-</th>
                         </tr>
                 ");
                 
                 while($row = $result -> fetch_assoc()){
-                    echo("<tr><td>".$row['id_authors']."</td><td>".$row['name']."</td></tr>");
+                    echo("<tr><td>".$row['id_authors']."</td><td>".$row['name']."</td><td><form action='delete_authors.php' method='POST'>
+                    <input value='".$row['id_authors']."' type='text' name='delete_authors' hidden>
+                    <input class='delete' type='submit' value='Usuń'>
+                    </form></td></tr>");
                 }
                 echo("</table>");
             }

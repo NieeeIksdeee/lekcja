@@ -79,3 +79,16 @@ a{
 a:hover{
     filter:invert(70%);
 }
+
+.delete{
+    background: none;
+    color: white;
+    border: none;  
+}
+
+tr:hover{
+    filter:invert(70%);
+}
+input{
+    cursor: pointer;
+}
