@@ -58,28 +58,28 @@
 
                 $sqlb = "SELECT * FROM bibl_users";
                 $resultb = $conn -> query($sqlb);
-
+                echo("<div class='add_form'>");
                 echo("<form method='POST' action='insert.php'>");
                 
-                    echo("Książka: <select name='book'>");
+                    echo("Książka <br/><select name='book'>");
                         while($row = $resulta -> fetch_assoc()){
                             $a++;
                             echo("<option value='".$row['id_titles']."'>".$row['title']."</option>");
                         }
                     echo("</select>");
 
-                    echo("Użytkownik: <select name='user'>");
+                    echo("<br/>Użytkownik <br/><select name='user'>");
                         while($row = $resultb -> fetch_assoc()){
-                            echo("<option value='".$row['id_users']."'>".$row['login']."</option>");
+                            echo("<option class='option' value='".$row['id_users']."'>".$row['login']."</option>");
                         }
                     echo("</select>");
 
-                    echo("Data przyjęcia<input type='date' name='in'>");
-                    echo("Data zwrotu<input type='date' name='out'>");
-                    echo("<br/><input type='submit' value='Wypożycz'>");
+                    echo("<br/>Data przyjęcia<br/><input type='date' name='in'>");
+                    echo("<br/>Data zwrotu<br/><input type='date' name='out'>");
+                    echo("<br/><input class='submit' type='submit' value='Wypożycz'>");
 
                 echo("</form>");
-
+                echo("</div>");
                 echo("<table border='1px'>
                         <tr>
                             <th>id_checkouts</th>
@@ -88,20 +88,26 @@
                             <th>password</th>
                             <th>date_in</th>
                             <th>date_out</th>
+                            <th>Dni do końca</th>
                             <th>-</th>
                         </tr>
                 ");
                 while($row = $result -> fetch_assoc()){
-                    echo("<tr><td>".$row['id_checkouts']."</td><td>".$row['title']."</td><td>".$row['login']."</td><td>".$row['password']."</td><td>".$row['date_in']."</td><td>".$row['date_out']."</td><td><form action='delete.php' method='POST'>
+                    $in=$row['date_in'];
+                    $out=$row['date_out'];
+                    $date1=date_create(date('Y-m-d'));
+                    $date2=date_create("$out");
+                    $diff=date_diff($date1,$date2);
+                    echo("<tr><td>".$row['id_checkouts']."</td><td>".$row['title']."</td><td>".$row['login']."</td><td>".$row['password']."</td><td>".$row['date_in']."</td><td>".$row['date_out']."</td><td>".$diff->format("%R%a days")."</td><td><form action='delete.php' method='POST'>
                     <input value='".$row['id_checkouts']."' type='text' name='delete' hidden>
                     <input class='delete' type='submit' value='Zwróć'>
                     </form></td></tr>");
-                    $earlier = new DateTime('"'.$row['date_in'].'"');
-                    $later = new DateTime('"'.$row['date_out'].'"');
-
-                    $diff = $later->diff($earlier)->format("%a");
+                    
+                    
+            
                 }
                 echo("</table>");
+                
             }
             else{
                 echo("<h1>Niezalogowany</h1>");
@@ -111,6 +117,7 @@
         </div>
         <div class="footer">
             <p>© 2019 NieeeIksdeee</p>
+            
         </div>
 
     </div>

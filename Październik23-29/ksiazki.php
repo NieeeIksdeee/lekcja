@@ -55,7 +55,7 @@
 
                 echo("<form method='POST' action='insert_title.php'>
                     <input placeholder='Podaj tytuł' type='text' name='title'>
-                    <input type='submit' value='Dodaj'>
+                    <input class='submit' type='submit' value='Dodaj'>
                 </form>");
                 echo("<table border='1px'>
                         <tr>

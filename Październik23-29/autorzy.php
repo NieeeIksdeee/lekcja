@@ -53,7 +53,7 @@
                 $result = $conn -> query($sql);
                 echo("<form method='POST' action='insert_author.php'>
                 <input placeholder='Podaj autora' type='text' name='author'>
-                <input type='submit' value='Dodaj'>
+                <input class='submit' type='submit' value='Dodaj'>
                 </form>");
                 echo("<table border='1px'>
                         <tr>

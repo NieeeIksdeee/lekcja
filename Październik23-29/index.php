@@ -44,20 +44,16 @@
             </a>
         </div>
         <div class="main">
+            <div class="menu">
+                <div class="triangle first"></div>
+                <div class="triangle second"></div>
+                <div class="triangle third"></div>
+                <div class="triangle fourth"></div>
+            </div>
         <?php
             require("conn.php");
+            require("login_system.php");
             
-            $sql = "SELECT password FROM bibl_users WHERE login like '".$_POST['login']."'";
-            $result = $conn -> query($sql);
-            if($result->num_rows==1){
-                while($row = $result -> fetch_assoc()){
-                    $pass = $row['password'];
-                }
-    
-                if(isset($_POST['password']) && $_POST['password'] == $pass){
-                    $_SESSION["Zalogowany"]=1;
-                }
-            }
             
             if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] = 1){
                 echo("<h1>Witamy!</h1>");

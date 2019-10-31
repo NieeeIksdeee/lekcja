@@ -83,12 +83,72 @@ a:hover{
 .delete{
     background: none;
     color: white;
-    border: none;  
+    border: none; 
+    
 }
-
+.add_form{
+    display: flex;
+}
 tr:hover{
     filter:invert(70%);
 }
 input{
     cursor: pointer;
+    color: white; 
+}
+.submit{
+    border-radius: 10px;
+    background: none;
+    padding: 5px;
+}
+select{
+    color: white;
+}
+
+table{
+    border-radius: 20px;
+}
+th{
+    border-radius: 10px;
+}
+td{
+    border-radius: 10px; 
+    padding: 5px;
+}
+.menu{
+    position: relative;
+}
+.triangle{
+    width         : 0;
+    height        : 0;
+    border-left   : 100px solid transparent;
+    border-right  : 100px solid transparent;  
+    
+}
+.first{
+    position: absolute;
+    border-bottom : 170px solid white;
+    border-left   : 100px solid transparent;
+    border-right  : 100px solid transparent;  
+}
+.second{
+    position: absolute;
+    border-bottom : 150px solid gray;
+    border-left   : 88px solid transparent;
+    border-right  : 88px solid transparent;  
+}
+.third{
+    position: absolute;
+    border-bottom : 130px solid lightgray;
+    border-left   : 76px solid transparent;
+    border-right  : 76px solid transparent;  
+}
+.fourth{
+    position: absolute;
+    border-bottom : 110px solid darkgrey;
+    border-left   : 65px solid transparent;
+    border-right  : 65px solid transparent;  
+}
+.triangle:hover{
+    border-bottom-color: red;
 }
