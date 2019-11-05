@@ -25,7 +25,7 @@ body{
     position: absolute;
     height: 50px;
     width: 50px;
-    background-color: rgb(250, 140, 158);
+    background-color: rgb(182, 101, 115);
     border-radius: 50%;
 }
 .ear_left_clap{
@@ -43,10 +43,10 @@ body{
     height:20px;
     width:50px;
     border-radius: 90px 90px 0 0;
-    background:rgb(182, 101, 115);
-    transform: rotate(-210deg);
-    top: 0px;
-    right: 9px;
+    background:rgb(250, 140, 158);
+    transform: rotate(-215deg);
+    top: 17px;
+    right: 0px;
 }
 .ear_right_clap{
     position: absolute;
@@ -58,11 +58,21 @@ body{
     top: 0px;
     left: 9px;
 }
+.ear_right_clap_second{
+    position: absolute;
+    height:20px;
+    width:50px;
+    border-radius: 90px 90px 0 0;
+    background:rgb(250, 140, 158);
+    transform: rotate(215deg);
+    top: 17px;
+    right: 0px;
+}
 .ear_right{
     position: absolute;
     height: 50px;
     width: 50px;
-    background-color: rgb(250, 140, 158);
+    background-color: rgb(182, 101, 115);
     border-radius: 50%;
     left: 90px;
 }
@@ -81,7 +91,7 @@ body{
 .iris_left{  
     height: 15px;
     width: 15px;
-    background-color: black;
+    background-color: darkgreen;
     border-radius: 50%;    
 }
 .eye_right{
@@ -99,7 +109,7 @@ body{
 .iris_right{  
     height: 15px;
     width: 15px;
-    background-color: black;
+    background-color: darkgreen;
     border-radius: 50%;    
 }
 .nose{
