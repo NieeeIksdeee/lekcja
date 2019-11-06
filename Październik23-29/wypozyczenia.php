@@ -20,7 +20,7 @@
     <div class="container">
         <div class="header">
             <a href="index.php">
-                <img src="bibl_logo.png">
+                <img class='logo' src="bibl_logo.png">
                 
             </a>
         </div>
@@ -29,9 +29,13 @@
                 Autorzy<br/>
                 <i class="fas fa-user-alt"></i>
             </a>
+            <a href="tytuły.php">
+                Tytuły<br/>
+                <i class="fas fa-heading"></i>
+            </a>
             <a href="ksiazki.php">
                 Książki<br/>
-                <i class="fas fa-book"></i>
+                <i class="fas fa-book-open"></i>
             </a>
             <a href="wypozyczenia.php">
                 Wypożyczenia<br/>
@@ -50,7 +54,7 @@
             require("conn.php");
             
             if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] = 1){
-                $sql = "SELECT * FROM bibl_books,bibl_titles,bibl_checkouts,bibl_users WHERE bibl_books.id_titles=bibl_titles.id_titles && bibl_checkouts.id_users=bibl_users.id_users && bibl_checkouts.id_books=bibl_books.id_books";
+                $sql = "SELECT * FROM bibl_checkouts,bibl_users,bibl_titles WHERE bibl_checkouts.id_users=bibl_users.id_users AND bibl_checkouts.id_titles=bibl_titles.id_titles";
                 $result = $conn -> query($sql);
 
                 $sqla = "SELECT * FROM bibl_books,bibl_titles WHERE bibl_books.id_titles=bibl_titles.id_titles";

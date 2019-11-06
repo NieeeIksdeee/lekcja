@@ -20,7 +20,7 @@
     <div class="container">
         <div class="header">
             <a href="index.php">
-                <img src="bibl_logo.png">
+                <img class='logo' src="bibl_logo.png">
                 
             </a>
         </div>
@@ -29,9 +29,13 @@
                 Autorzy<br/>
                 <i class="fas fa-user-alt"></i>
             </a>
+            <a href="tytuły.php">
+                Tytuły<br/>
+                <i class="fas fa-heading"></i>
+            </a>
             <a href="ksiazki.php">
                 Książki<br/>
-                <i class="fas fa-book"></i>
+                <i class="fas fa-book-open"></i>
             </a>
             <a href="wypozyczenia.php">
                 Wypożyczenia<br/>
@@ -44,25 +48,21 @@
             </a>
         </div>
         <div class="main">
-            <div class="menu">
-                <div class="triangle first"></div>
-                <div class="triangle second"></div>
-                <div class="triangle third"></div>
-                <div class="triangle fourth"></div>
-            </div>
-        <?php
-            require("conn.php");
-            require("login_system.php");
             
-            
-            if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] = 1){
-                echo("<h1>Witamy!</h1>");
+            <?php
+                require("conn.php");
+                require("login_system.php");
+                
+                
+                if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] = 1){
+                    echo("<h1>Witamy!</h1>");
+                }
+                else{
+                    echo("<h1>Niezalogowany</h1>");
+                    header('Location: login.php');
             }
-            else{
-                echo("<h1>Niezalogowany</h1>");
-                header('Location: login.php');
-        }
-        ?>
+            ?>
+            <img class='bibl' src="http://3.bp.blogspot.com/-_ifLBpy5zS4/VKAlA-0NMmI/AAAAAAAAB7k/4gnixpJD47Q/s1600/27arc-u-2091_cph_bogsamler_interior.jpg">
         </div>
         <div class="footer">
             <p>© 2019 NieeeIksdeee</p>
