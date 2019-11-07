@@ -19,6 +19,12 @@
 <body>
     <div class="container">
         <div class="header">
+            <div class="socialtab">
+                <a class="social sc" href="#"><i class="fab fa-snapchat-square"></i></a>
+                <a class="social tt" href="#"><i class="fab fa-twitter-square"></i></a>
+                <a class="social yt" href="#"><i class="fab fa-youtube-square"></i></a>
+                <a class="social fb" href="#"><i class="fab fa-facebook-square"></i></a>    
+            </div>
             <a href="index.php">
                 <img class='logo' src="bibl_logo.png">
                 
@@ -71,11 +77,11 @@
                         $a++;
                         echo("<option value='".$row['id_authors']."'>".$row['name']."</option>");
                     }
-                echo("</select>");
+                echo("</select><br/>");
                 echo("<input class='submit' type='submit' value='Dodaj'>
                 </form>");
                 echo("<table border='1px'>
-                        <tr>
+                        <tr class='tabh'>
                             <th>id_books</th>
                             <th>author</th>
                             <th>title</th>

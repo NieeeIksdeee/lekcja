@@ -17,9 +17,17 @@
     <script src="https://kit.fontawesome.com/91ac18a2f9.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    
     <div class="container">
+        
         <div class="header">
-            <a href="index.php">
+        <div class="socialtab">
+            <a class="social sc" href="#"><i class="fab fa-snapchat-square"></i></a>
+            <a class="social tt" href="#"><i class="fab fa-twitter-square"></i></a>
+            <a class="social yt" href="#"><i class="fab fa-youtube-square"></i></a>
+            <a class="social fb" href="#"><i class="fab fa-facebook-square"></i></a>    
+        </div>
+           <a href="index.php">
                 <img class='logo' src="bibl_logo.png">
                 
             </a>
