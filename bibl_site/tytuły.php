@@ -32,25 +32,25 @@
         </div>
         <div class="sidebar">
             <a href="autorzy.php">
-                Autorzy<br/>
-                <i class="fas fa-user-alt"></i>
+                <p>Autorzy</p><br/>
+                <i class="fas fa-user-alt menu"></i>
             </a>
             <a href="tytuły.php">
-                Tytuły<br/>
-                <i class="fas fa-heading"></i>
+                <p>Tytuły</p><br/>
+                <i class="fas fa-heading menu"></i>
             </a>
             <a href="ksiazki.php">
-                Książki<br/>
-                <i class="fas fa-book-open"></i>
+                <p>Książki</p><br/>
+                <i class="fas fa-book-open menu"></i>
             </a>
             <a href="wypozyczenia.php">
-                Wypożyczenia<br/>
-                <i class="fas fa-address-book"></i>
+                <p>Wypożyczenia</p><br/>
+                <i class="fas fa-address-book menu"></i>
             </a>
             
             <a href="login.php?Akcja=Wyloguj">
-                Wyloguj<br/>
-                <i class="fas fa-sign-out-alt"></i>
+                <p>Wyloguj</p><br/>
+                <i class="fas fa-sign-out-alt menu"></i>
             </a>
         </div>
         <div class="main">

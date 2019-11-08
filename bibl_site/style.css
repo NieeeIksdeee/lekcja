@@ -145,18 +145,30 @@ tr:hover{
     font-size: 35px;
 }
 
-.fb{
-    /* color: #4267B2; */
+p{
+    margin: 0px;
+    font-size: 20px;
 }
-.yt{
-    /* color: #FF0000; */
+.menu{
+    padding: 5px;
+}
+@media only screen and (max-width: 774px) {
+    p{
+      font-size: 0px;
+    }
+  }
+@media only screen and (max-width: 360px) {
+    .social{
+        font-size: 0px;
+    }
+}
+@media only screen and (max-width: 774px) {
+    table{
+        width: 400px;
+        font-size: 10px;
+    }
 }
 
-.tt{
-    /* color: #00aced; */
-}
-.sc{
-    /* color: #FFFC00; */
-}
+
 
 

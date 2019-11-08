@@ -24,7 +24,7 @@
                 <a class="social tt" href="#"><i class="fab fa-twitter-square"></i></a>
                 <a class="social yt" href="#"><i class="fab fa-youtube-square"></i></a>
                 <a class="social fb" href="#"><i class="fab fa-facebook-square"></i></a>    
-            </div> 
+            </div>
             <a href="index.php">
                 <img class='logo' src="bibl_logo.png">
                 
@@ -32,25 +32,25 @@
         </div>
         <div class="sidebar">
             <a href="autorzy.php">
-                Autorzy<br/>
-                <i class="fas fa-user-alt"></i>
+                <p>Autorzy</p><br/>
+                <i class="fas fa-user-alt menu"></i>
             </a>
             <a href="tytuły.php">
-                Tytuły<br/>
-                <i class="fas fa-heading"></i>
+                <p>Tytuły</p><br/>
+                <i class="fas fa-heading menu"></i>
             </a>
             <a href="ksiazki.php">
-                Książki<br/>
-                <i class="fas fa-book-open"></i>
+                <p>Książki</p><br/>
+                <i class="fas fa-book-open menu"></i>
             </a>
             <a href="wypozyczenia.php">
-                Wypożyczenia<br/>
-                <i class="fas fa-address-book"></i>
+                <p>Wypożyczenia</p><br/>
+                <i class="fas fa-address-book menu"></i>
             </a>
             
             <a href="login.php?Akcja=Wyloguj">
-                Wyloguj<br/>
-                <i class="fas fa-sign-out-alt"></i>
+                <p>Wyloguj</p><br/>
+                <i class="fas fa-sign-out-alt menu"></i>
             </a>
         </div>
         <div class="main">
@@ -58,24 +58,40 @@
             require("conn.php");
             
             if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] = 1){
-                echo("<h1>Autorzy!</h1>");
-                $sql = "SELECT * FROM bibl_authors";
+                echo("<h1>Książki!</h1>");
+                $sql = "SELECT bibl_books.id_books,bibl_authors.name,bibl_titles.title FROM bibl_books,bibl_authors,bibl_titles WHERE bibl_books.id_authors=bibl_authors.id_authors AND bibl_books.id_titles=bibl_titles.id_titles ";
                 $result = $conn -> query($sql);
-                echo("<form method='POST' action='insert_author.php'>
-                <input placeholder='Podaj autora' type='text' name='author'>
-                <input class='submit' type='submit' value='Dodaj'>
+                $sqla = "SELECT * FROM bibl_titles";
+                $resulta = $conn -> query($sqla);
+                $sqlb = "SELECT * FROM bibl_authors";
+                $resultb = $conn -> query($sqlb);
+                echo("<form method='POST' action='insert_books.php'>");
+                echo("Tytuł <br/><select name='title'>");
+                    while($row = $resulta -> fetch_assoc()){
+                        $a++;
+                        echo("<option value='".$row['id_titles']."'>".$row['title']."</option>");
+                    }
+                echo("</select>");
+                echo("<br/>Autor <br/><select name='author'>");
+                    while($row = $resultb -> fetch_assoc()){
+                        $a++;
+                        echo("<option value='".$row['id_authors']."'>".$row['name']."</option>");
+                    }
+                echo("</select><br/>");
+                echo("<input class='submit' type='submit' value='Dodaj'>
                 </form>");
                 echo("<table border='1px'>
                         <tr class='tabh'>
-                            <th>id_authors</th>
-                            <th>name</th>
+                            <th>id_books</th>
+                            <th>author</th>
+                            <th>title</th>
                             <th>-</th>
                         </tr>
                 ");
                 
                 while($row = $result -> fetch_assoc()){
-                    echo("<tr><td>".$row['id_authors']."</td><td>".$row['name']."</td><td><form action='delete_authors.php' method='POST'>
-                    <input value='".$row['id_authors']."' type='text' name='delete_authors' hidden>
+                    echo("<tr><td>".$row['id_books']."</td><td>".$row['name']."</td><td>".$row['title']."</td><td><form action='delete_books.php' method='POST'>
+                    <input value='".$row['id_books']."' type='text' name='delete_books' hidden>
                     <input class='delete' type='submit' value='Usuń'>
                     </form></td></tr>");
                 }

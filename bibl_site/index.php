@@ -34,29 +34,28 @@
         </div>
         <div class="sidebar">
             <a href="autorzy.php">
-                Autorzy<br/>
-                <i class="fas fa-user-alt"></i>
+                <p>Autorzy</p><br/>
+                <i class="fas fa-user-alt menu"></i>
             </a>
             <a href="tytuły.php">
-                Tytuły<br/>
-                <i class="fas fa-heading"></i>
+                <p>Tytuły</p><br/>
+                <i class="fas fa-heading menu"></i>
             </a>
             <a href="ksiazki.php">
-                Książki<br/>
-                <i class="fas fa-book-open"></i>
+                <p>Książki</p><br/>
+                <i class="fas fa-book-open menu"></i>
             </a>
             <a href="wypozyczenia.php">
-                Wypożyczenia<br/>
-                <i class="fas fa-address-book"></i>
+                <p>Wypożyczenia</p><br/>
+                <i class="fas fa-address-book menu"></i>
             </a>
             
             <a href="login.php?Akcja=Wyloguj">
-                Wyloguj<br/>
-                <i class="fas fa-sign-out-alt"></i>
+                <p>Wyloguj</p><br/>
+                <i class="fas fa-sign-out-alt menu"></i>
             </a>
         </div>
         <div class="main">
-            
             <?php
                 require("conn.php");
                 require("login_system.php");
@@ -73,7 +72,7 @@
             <img class='bibl' src="http://3.bp.blogspot.com/-_ifLBpy5zS4/VKAlA-0NMmI/AAAAAAAAB7k/4gnixpJD47Q/s1600/27arc-u-2091_cph_bogsamler_interior.jpg">
         </div>
         <div class="footer">
-            <p>© 2019 NieeeIksdeee</p>
+            <div>© 2019 NieeeIksdeee</div>
         </div>
 
     </div>
