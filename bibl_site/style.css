@@ -131,6 +131,7 @@ tr:hover{
     border-radius: 0% 0% 0% 15%;
     border: solid 5px white;
     max-width: 800px;
+    max-height: 500px;
 }
 .socialtab{
     height: 15vh;
@@ -152,6 +153,32 @@ p{
 .menu{
     padding: 5px;
 }
+.index{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.slider{
+    height: 50%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 2px red;
+}
+.button{
+    height: 50%;
+    width: 40px;
+    border: solid 2px green;
+}
+
+.slider_item{
+    height: 100px;
+    width: 200px;
+}
+.show{
+    height: 200px;
+    width: 400px;
+}
 @media only screen and (max-width: 774px) {
     p{
       font-size: 0px;
@@ -168,6 +195,13 @@ p{
         font-size: 10px;
     }
 }
+@media only screen and (max-width: 774px) {
+    .bibl{
+        height: 40%;
+        
+    }
+}
+
 
 
 

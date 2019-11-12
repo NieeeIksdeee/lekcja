@@ -55,21 +55,32 @@
                 <i class="fas fa-sign-out-alt menu"></i>
             </a>
         </div>
-        <div class="main">
+        <div class="main index">
             <?php
                 require("conn.php");
                 require("login_system.php");
                 
                 
                 if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] = 1){
-                    echo("<h1>Witamy!</h1>");
+                    
                 }
                 else{
                     echo("<h1>Niezalogowany</h1>");
                     header('Location: login.php');
             }
             ?>
-            <img class='bibl' src="http://3.bp.blogspot.com/-_ifLBpy5zS4/VKAlA-0NMmI/AAAAAAAAB7k/4gnixpJD47Q/s1600/27arc-u-2091_cph_bogsamler_interior.jpg">
+            <br/>
+            <div class="button left"><----</div>
+            <div class="slider">
+                
+                <img class="slider_item" src="images/img1.jpg">
+                <img class="slider_item" src="images/img2.jpeg">
+                <img class="slider_item" src="images/img3.jpeg">
+                <img class="slider_item" src="images/img4.jpg">
+                <img class="slider_item" src="images/img5.jpg">
+                
+            </div>
+            <div class="button right">----></div>
         </div>
         <div class="footer">
             <div>© 2019 NieeeIksdeee</div>
@@ -77,4 +88,5 @@
 
     </div>
 </body>
+<script src="script.js"></script>
 </html>
