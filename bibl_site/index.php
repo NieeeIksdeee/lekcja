@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="style.css" class="css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://kit.fontawesome.com/91ac18a2f9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="slider.css" class="css">
 </head>
 <body>
     
@@ -72,13 +73,11 @@
             <br/>
             <div class="button left"><----</div>
             <div class="slider">
-                
-                <img class="slider_item" src="images/img1.jpg">
-                <img class="slider_item" src="images/img2.jpeg">
-                <img class="slider_item" src="images/img3.jpeg">
-                <img class="slider_item" src="images/img4.jpg">
-                <img class="slider_item" src="images/img5.jpg">
-                
+                <div class="slider_item"><h1 class="h">1</h1></div>
+                <div class="slider_item"><h1 class="h">2</h1></div>
+                <div class="slider_item"><h1 class="h">3</h1></div>
+                <div class="slider_item"><h1 class="h">4</h1></div>
+                <div class="slider_item"><h1 class="h">5</h1></div>
             </div>
             <div class="button right">----></div>
         </div>
@@ -90,3 +89,9 @@
 </body>
 <script src="script.js"></script>
 </html>
+
+<!-- <img class="slider_item" src="images/img1.jpg">
+<img class="slider_item" src="images/img2.jpeg">
+<img class="slider_item" src="images/img3.jpeg">
+<img class="slider_item" src="images/img4.jpg">
+<img class="slider_item" src="images/img5.jpg"> -->

@@ -5,7 +5,7 @@ body{
     width: 100%;
     background: #9999C3;
     color: white;
-    text-align: center;
+    
     font-family: "Ubuntu Condensed";
 }
 .header{
@@ -153,32 +153,7 @@ p{
 .menu{
     padding: 5px;
 }
-.index{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.slider{
-    height: 50%;
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    border: solid 2px red;
-}
-.button{
-    height: 50%;
-    width: 40px;
-    border: solid 2px green;
-}
 
-.slider_item{
-    height: 100px;
-    width: 200px;
-}
-.show{
-    height: 200px;
-    width: 400px;
-}
 @media only screen and (max-width: 774px) {
     p{
       font-size: 0px;

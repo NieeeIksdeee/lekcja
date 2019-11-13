@@ -1,0 +1,53 @@
+.index{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.slider{
+    position: relative;
+    height: 50%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 2px red;
+}
+.button{
+    height: 50%;
+    width: 40px;
+    border: solid 2px green;
+}
+
+.slider_item{
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    background: gray;
+    display: none;
+    
+}
+.active{
+    display: block;
+    height: 100%;
+    width: 100%;
+    
+}
+.h{
+    position: absolute;
+    margin: 0px;
+}
+.slide_r{
+    -webkit-animation-name: animation_r;
+    -webkit-animation-duration: 1s;
+}
+.slide_l{
+    -webkit-animation-name: animation_l;
+    -webkit-animation-duration: 1s;
+}
+@-webkit-keyframes animation_r{
+    0%   {left:40px; top:0px;}
+    100% {left:0px; top:0px;}
+  }
+@-webkit-keyframes animation_l{
+    0%   {left:-40px; top:0px;}
+    100% {left:0px; top:0px;}
+  }
