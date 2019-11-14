@@ -71,15 +71,31 @@
             }
             ?>
             <br/>
-            <div class="button left"><----</div>
+            
             <div class="slider">
-                <div class="slider_item"><h1 class="h">1</h1></div>
-                <div class="slider_item"><h1 class="h">2</h1></div>
-                <div class="slider_item"><h1 class="h">3</h1></div>
-                <div class="slider_item"><h1 class="h">4</h1></div>
-                <div class="slider_item"><h1 class="h">5</h1></div>
+                <div class="button left">
+                    <i class="fas fa-arrow-circle-left"></i>
+                </div>
+                <div class="slider_item img_one">
+                    <img class="img" src="images/img1.jpg">
+                </div>
+                <div class="slider_item img_two">
+                    <img class="img" src="images/img2.jpeg">
+                </div>
+                <div class="slider_item img_three">
+                    <img class="img" src="images/img3.jpeg">
+                </div>
+                <div class="slider_item img_four">
+                    <img class="img" src="images/img4.jpg">
+                </div>
+                <div class="slider_item img_five">
+                 <img class="img" src="images/img5.jpg">
+                </div>
+                <div class="button right">
+                    <i class="fas fa-arrow-circle-right"></i>
+                </div>
             </div>
-            <div class="button right">----></div>
+            
         </div>
         <div class="footer">
             <div>© 2019 NieeeIksdeee</div>
@@ -91,7 +107,7 @@
 </html>
 
 <!-- <img class="slider_item" src="images/img1.jpg">
-<img class="slider_item" src="images/img2.jpeg">
+<img class="img" src="images/img2.jpeg">
 <img class="slider_item" src="images/img3.jpeg">
 <img class="slider_item" src="images/img4.jpg">
 <img class="slider_item" src="images/img5.jpg"> -->

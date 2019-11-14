@@ -1,7 +1,7 @@
 .index{
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 .slider{
     position: relative;
@@ -9,19 +9,26 @@
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    border: solid 2px red;
+    min-width: 719px;
+    max-width: 719px;
+    border: solid 1px gray;
+    border-radius: 20px;
+    
 }
 .button{
-    height: 50%;
+    height: 100%;
     width: 40px;
-    border: solid 2px green;
+    background: black;
+    opacity: 0.2;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .slider_item{
     position: absolute;
     height: 100px;
     width: 200px;
-    background: gray;
     display: none;
     
 }
@@ -31,23 +38,50 @@
     width: 100%;
     
 }
+.right{
+    position: absolute;
+    right: 0px;
+    z-index: 10;
+    border-radius: 0px 20px 20px 0px;
+}
+.left{
+    position: absolute;
+    left: 0px;
+    z-index: 10;
+    border-radius: 20px 0px 0px 20px;
+}
 .h{
     position: absolute;
     margin: 0px;
+}
+.img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 .slide_r{
     -webkit-animation-name: animation_r;
     -webkit-animation-duration: 1s;
 }
+
 .slide_l{
     -webkit-animation-name: animation_l;
     -webkit-animation-duration: 1s;
 }
+.fas{
+    opacity: 1;
+}
 @-webkit-keyframes animation_r{
-    0%   {left:40px; top:0px;}
-    100% {left:0px; top:0px;}
+    0%   {left:40px; top:0px; opacity:0;}
+    100% {left:0px; top:0px; opacity:1;}
   }
 @-webkit-keyframes animation_l{
-    0%   {left:-40px; top:0px;}
-    100% {left:0px; top:0px;}
+    0%   {left:-40px; top:0px; opacity:0;}
+    100% {left:0px; top:0px; opacity:1;}
   }
+@media only screen and (max-width: 855px) {
+    .slider{
+        width: 20px;
+    }
+
+}
