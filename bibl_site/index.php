@@ -94,8 +94,18 @@
                 <div class="button right">
                     <i class="fas fa-arrow-circle-right"></i>
                 </div>
+                
             </div>
-            
+            <div class="dot_menu">
+                <span class="dot first">1</span>
+                <span class="dot second">2</span>
+                <span class="dot third">3</span>
+                <span class="dot fourth">4</span>
+                <span class="dot fifth">5</span>
+            </div>
+            <div class="low_width">
+                <h1>KUP SE WIEKSZY EKRAN - OBRÓĆ EKRAN</h1>
+            </div>
         </div>
         <div class="footer">
             <div>© 2019 NieeeIksdeee</div>

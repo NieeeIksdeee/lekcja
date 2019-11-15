@@ -44,11 +44,17 @@
     z-index: 10;
     border-radius: 0px 20px 20px 0px;
 }
+.right:hover{
+    opacity: 0.5;
+}
 .left{
     position: absolute;
     left: 0px;
     z-index: 10;
     border-radius: 20px 0px 0px 20px;
+}
+.left:hover{
+    opacity: 0.5;
 }
 .h{
     position: absolute;
@@ -71,6 +77,37 @@
 .fas{
     opacity: 1;
 }
+.dot_menu{
+    z-index: 10;
+    border-bottom: solid 1px gray;
+    border-left: solid 1px gray;
+    border-right: solid 1px gray;
+    border-radius: 00px 0px 10px 10px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.dot{
+    height: 25px;
+    width: 25px;
+    margin: 2px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0.2;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dot:hover{
+    opacity: 0.5;
+}
+.low_width{
+    display: none;
+}
 @-webkit-keyframes animation_r{
     0%   {left:40px; top:0px; opacity:0;}
     100% {left:0px; top:0px; opacity:1;}
@@ -81,7 +118,12 @@
   }
 @media only screen and (max-width: 855px) {
     .slider{
-        width: 20px;
+        display: none;
     }
-
+    .dot_menu{
+        display: none;
+    }
+    .low_width{
+        display: inline-block;
+    }
 }
