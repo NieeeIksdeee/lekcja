@@ -73,21 +73,16 @@
             <br/>
             
             <div class="slider">
-                <div class="button left">
+                <div class="button left" onclick="prew()">
                     <i class="fas fa-arrow-circle-left"></i>
                 </div>
                 <div class="slider_items"></div>
-                <div class="button right">
+                <div class="button right" onclick="next()">
                     <i class="fas fa-arrow-circle-right"></i>
                 </div>
-                
             </div>
             <div class="dot_menu">
-                <span class="dot first">1</span>
-                <span class="dot second">2</span>
-                <span class="dot third">3</span>
-                <span class="dot fourth">4</span>
-                <span class="dot fifth">5</span>
+                
             </div>
             <div class="low_width">
                 <h1>Slider niedostępny w takiej szerokości okna</h1>
