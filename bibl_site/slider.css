@@ -9,6 +9,8 @@
     width: 80%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     min-width: 719px;
     max-width: 719px;
     border: solid 1px gray;
@@ -25,18 +27,25 @@
     align-items: center;
 }
 
-.slider_item{
+.slider_items{
     position: absolute;
-    height: 100px;
-    width: 200px;
-    display: none;
     
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.img{
+    display: none;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 .active{
     display: block;
     height: 100%;
     width: 100%;
-    
 }
 .right{
     position: absolute;
@@ -60,11 +69,7 @@
     position: absolute;
     margin: 0px;
 }
-.img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
+
 .slide_r{
     -webkit-animation-name: animation_r;
     -webkit-animation-duration: 1s;

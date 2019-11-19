@@ -76,21 +76,7 @@
                 <div class="button left">
                     <i class="fas fa-arrow-circle-left"></i>
                 </div>
-                <div class="slider_item img_one">
-                    <img class="img" src="images/img1.jpg">
-                </div>
-                <div class="slider_item img_two">
-                    <img class="img" src="images/img2.jpeg">
-                </div>
-                <div class="slider_item img_three">
-                    <img class="img" src="images/img3.jpeg">
-                </div>
-                <div class="slider_item img_four">
-                    <img class="img" src="images/img4.jpg">
-                </div>
-                <div class="slider_item img_five">
-                 <img class="img" src="images/img5.jpg">
-                </div>
+                <div class="slider_items"></div>
                 <div class="button right">
                     <i class="fas fa-arrow-circle-right"></i>
                 </div>
@@ -104,7 +90,7 @@
                 <span class="dot fifth">5</span>
             </div>
             <div class="low_width">
-                <h1>KUP SE WIEKSZY EKRAN - OBRÓĆ EKRAN</h1>
+                <h1>Slider niedostępny w takiej szerokości okna</h1>
             </div>
         </div>
         <div class="footer">
