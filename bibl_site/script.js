@@ -1,6 +1,7 @@
 let left = document.querySelector(".left");
 let right = document.querySelector(".right");
 let slider_items = document.querySelector(".slider_items");
+let dot_menu = document.querySelector(".dot_menu");
 
 let img1 = "images/img1.jpg";
 let img2 = "images/img2.jpeg";
@@ -10,19 +11,49 @@ let img5 = "images/img5.jpg";
 
 
 let images = [img1,img2,img3,img4,img5];
+
+let i = images.length;
+
+let img = document.createElement("img");
+img.classList.add("img");
+img.src=images[0];
+slider_items.appendChild(img);
+
+function next(){
+   img.src = images[i];
+   if(i<images.length){
+        i++;
+   }
+   else{
+       i=1;
+       
+   }
+   img.src=images[i-1];
+}
+
+function prew(){
+    img.src = images[i];
+    if(i<images.length+1 && i>1){
+         i--;
+    }
+    else{
+        i=1;
+        
+    }
+    img.src=images[i-1];
+ }
+x=0;
 images.forEach(function(e){
-    let img = document.createElement("img");
-    img.classList.add("img");
-    img.src=e;
-    slider_items.appendChild(img);
-})
-slider_items.children[0].classList.add("active");
-console.log(slider_items.children);
-right.addEventListener("click",function(){
-    slider_items.forEach(function(e){
-        console.log
+    x++;
+    dot = document.createElement("span");
+    dot.innerText=x;
+    dot.classList.add("dot");
+    dot_menu.appendChild(dot);
+    dot.addEventListener("click", function(){
+        console.log("pr");
     })
 })
+ setInterval(next,3000);
 
 // $right.addEventListener("click",function(){
 //     if($images[0].classList.contains("active")){
