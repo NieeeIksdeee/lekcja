@@ -12,48 +12,53 @@ let img5 = "images/img5.jpg";
 
 let images = [img1,img2,img3,img4,img5];
 
-let i = images.length;
+let i = 0;
 
 let img = document.createElement("img");
 img.classList.add("img");
 img.src=images[0];
 slider_items.appendChild(img);
+img.classList.add("slide_r");
 
 function next(){
-   img.src = images[i];
-   if(i<images.length){
+    
+   if(i<images.length-1){
         i++;
    }
    else{
-       i=1;
+       i=0;
        
    }
-   img.src=images[i-1];
+   
+   img.src=images[i];
+   
 }
 
 function prew(){
-    img.src = images[i];
-    if(i<images.length+1 && i>1){
+    
+    if(i>0){
          i--;
     }
     else{
-        i=1;
+        i=images.length-1;
         
     }
-    img.src=images[i-1];
+    img.src=images[i];
  }
 x=0;
-images.forEach(function(e){
-    x++;
+images.forEach(function(e){  
     dot = document.createElement("span");
-    dot.innerText=x;
+    dot.innerText=x+1;
     dot.classList.add("dot");
+    dot.classList.add("dot_"+(x+1));
     dot_menu.appendChild(dot);
+    x++;
     dot.addEventListener("click", function(){
         console.log("pr");
     })
 })
- setInterval(next,3000);
+ setInterval(next,5000);
+
 
 // $right.addEventListener("click",function(){
 //     if($images[0].classList.contains("active")){
