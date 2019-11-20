@@ -15,12 +15,12 @@ body{
     border-bottom: 5px solid white;
 }
 
-img{
+.logo{
     height: 150px;
     width: 282px;
     filter:invert(100%)
 }
-img:hover{
+.logo:hover{
     filter:invert(70%);
 }
 
@@ -104,7 +104,7 @@ a{
     align-items: center;
     flex-direction: column;
 }
-.area:hover{
+.hover{
     filter:invert(70%);
 }
 

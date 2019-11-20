@@ -5,13 +5,14 @@ body{
     width: 100%;
     background: #9999C3;
     color: white;
-    
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-family: "Ubuntu Condensed";
 }
 .header{
     background: #8E88C8;
     grid-area: header;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     border-bottom: 5px solid white;
@@ -37,9 +38,10 @@ body{
     border: 5px solid white;
     border-radius: 0px 0px 0px 100px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     
 }
 
@@ -92,7 +94,7 @@ a:hover{
 
 input{
     cursor: pointer;
-    color: white; 
+    color: black; 
 }
 .submit{
     border-radius: 10px;
@@ -100,7 +102,7 @@ input{
     padding: 5px;
 }
 select{
-    color: white;
+    color: black;
     text-align: center;
 }
 
@@ -113,8 +115,10 @@ th{
     padding: 5px;
 }
 td{
+    text-align: center;
     border-radius: 10px; 
     padding: 5px;
+    
 }
 tr{
     border-radius: 10px; 
@@ -136,10 +140,9 @@ tr:hover{
 .socialtab{
     height: 15vh;
     display: flex;
+    position: absolute;
     justify-content: center;
     flex-direction: column;
-    position: absolute;
-    
     right: 5px;
 }
 .social{
@@ -153,7 +156,12 @@ p{
 .menu{
     padding: 5px;
 }
-
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 @media only screen and (max-width: 774px) {
     p{
       font-size: 0px;

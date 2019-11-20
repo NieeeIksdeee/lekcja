@@ -59,8 +59,8 @@
         <?php
             require("conn.php");
             
-            if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] = 1){
-                $sql = "SELECT * FROM bibl_checkouts,bibl_users,bibl_titles WHERE bibl_checkouts.id_users=bibl_users.id_users AND bibl_checkouts.id_titles=bibl_titles.id_titles";
+            if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] == 1){
+                $sql = "SELECT * FROM bibl_checkouts,bibl_users,bibl_books,bibl_titles WHERE bibl_checkouts.id_users=bibl_users.id_users AND bibl_checkouts.id_books=bibl_books.id_books AND bibl_books.id_titles=bibl_titles.id_titles";
                 $result = $conn -> query($sql);
 
                 $sqla = "SELECT * FROM bibl_books,bibl_titles WHERE bibl_books.id_titles=bibl_titles.id_titles";
@@ -74,7 +74,7 @@
                     echo("Książka <br/><select name='book'>");
                         while($row = $resulta -> fetch_assoc()){
                             $a++;
-                            echo("<option value='".$row['id_titles']."'>".$row['title']."</option>");
+                            echo("<option value='".$row['id_books']."'>".$row['title']."</option>");
                         }
                     echo("</select>");
 
@@ -112,12 +112,33 @@
                     <input value='".$row['id_checkouts']."' type='text' name='delete' hidden>
                     <input class='delete' type='submit' value='Zwróć'>
                     </form></td></tr>");
-                    
-                    
-            
                 }
                 echo("</table>");
                 
+            }else if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] == 0){
+                $sql = "SELECT * FROM bibl_checkouts,bibl_users,bibl_titles WHERE bibl_checkouts.id_users=bibl_users.id_users AND bibl_checkouts.id_titles=bibl_titles.id_titles";
+                $result = $conn -> query($sql);
+               
+                echo("<table border='1px'>
+                        <tr class='tabh'>
+                            <th>id_checkouts</th>
+                            <th>title</th>
+                            <th>login</th>
+                            <th>password</th>
+                            <th>date_in</th>
+                            <th>date_out</th>
+                            <th>Dni do końca</th>
+                        </tr>
+                ");
+                while($row = $result -> fetch_assoc()){
+                    $in=$row['date_in'];
+                    $out=$row['date_out'];
+                    $date1=date_create(date('Y-m-d'));
+                    $date2=date_create("$out");
+                    $diff=date_diff($date1,$date2);
+                    echo("<tr><td>".$row['id_checkouts']."</td><td>".$row['title']."</td><td>".$row['login']."</td><td>".$row['password']."</td><td>".$row['date_in']."</td><td>".$row['date_out']."</td><td>".$diff->format("%R%a days")."</td></tr>");        
+                }
+                echo("</table>");
             }
             else{
                 echo("<h1>Niezalogowany</h1>");
@@ -126,8 +147,7 @@
         ?>
         </div>
         <div class="footer">
-            <p>© 2019 NieeeIksdeee</p>
-            
+                  
         </div>
 
     </div>

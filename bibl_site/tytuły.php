@@ -57,7 +57,7 @@
         <?php
             require("conn.php");
             
-            if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] = 1){
+            if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] == 1){
                 echo("<h1>Tytuły!</h1>");
 
                 $sql = "SELECT * FROM bibl_titles";
@@ -82,6 +82,22 @@
                 }
                 echo("</table>");
             }
+            else if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] == 0){
+                echo("<h1>Tytuły!</h1>");
+
+                $sql = "SELECT * FROM bibl_titles";
+                $result = $conn -> query($sql);
+                echo("<table border='1px'>
+                        <tr class='tabh'>
+                            <th>id_titles</th>
+                            <th>title</th>
+                        </tr>
+                ");
+                while($row = $result -> fetch_assoc()){
+                    echo("<tr><td>".$row['id_titles']."</td><td>".$row['title']."</td></tr>");
+                }
+                echo("</table>");
+            }
             else{
                 echo("<h1>Niezalogowany</h1>");
                 header('Location: login.php');
@@ -89,7 +105,7 @@
         ?>
         </div>
         <div class="footer">
-            <p>© 2019 NieeeIksdeee</p>
+            
         </div>
 
     </div>

@@ -2,6 +2,7 @@ let left = document.querySelector(".left");
 let right = document.querySelector(".right");
 let slider_items = document.querySelector(".slider_items");
 let dot_menu = document.querySelector(".dot_menu");
+let logo = document.querySelector(".logo");
 
 let img1 = "images/img1.jpg";
 let img2 = "images/img2.jpeg";
@@ -9,19 +10,37 @@ let img3 = "images/img3.jpeg";
 let img4 = "images/img4.jpg";
 let img5 = "images/img5.jpg";
 
+let logo1 = "bibl_logo.png";
+let logo2 = "bibl_logo2.png";
+let logo3 = "bibl_logo3.png";
+let logo4 = "bibl_logo4.png";
 
 let images = [img1,img2,img3,img4,img5];
 
-let i = 0;
+let logos = [logo4,logo3,logo2,logo1];
 
+let l = 0;
+let i = 0;
+let x = 0;
+ 
 let img = document.createElement("img");
 img.classList.add("img");
 img.src=images[0];
 slider_items.appendChild(img);
 img.classList.add("slide_r");
 
+function logo_animate(){
+    if(l<logos.length-1){
+         l++;
+    }
+    else{
+        
+    }
+    logo.src=logos[l];
+ }
+ setInterval(logo_animate,500);
+
 function next(){
-    
    if(i<images.length-1){
         i++;
    }
@@ -45,7 +64,7 @@ function prew(){
     }
     img.src=images[i];
  }
-x=0;
+
 images.forEach(function(e){  
     dot = document.createElement("span");
     dot.innerText=x+1;
@@ -53,9 +72,6 @@ images.forEach(function(e){
     dot.classList.add("dot_"+(x+1));
     dot_menu.appendChild(dot);
     x++;
-    dot.addEventListener("click", function(){
-        console.log("pr");
-    })
 })
  setInterval(next,5000);
 

@@ -1,5 +1,6 @@
 <?php
     require("conn.php");
+    
     session_start();
     if(isset($_GET['Akcja']) && $_GET['Akcja'] == "Wyloguj"){
         unset($_SESSION['Zalogowany']);
@@ -22,16 +23,15 @@
     <div class="container">
         
         <div class="header">
-        <div class="socialtab">
-            <a class="social sc" href="#"><i class="fab fa-snapchat-square"></i></a>
-            <a class="social tt" href="#"><i class="fab fa-twitter-square"></i></a>
-            <a class="social yt" href="#"><i class="fab fa-youtube-square"></i></a>
-            <a class="social fb" href="#"><i class="fab fa-facebook-square"></i></a>    
-        </div>
-           <a href="index.php">
-                <img class='logo' src="bibl_logo.png">
-                
+            <a href="index.php">
+                <img class='logo' src="bibl_logo4.png">
             </a>
+            <div class="socialtab">
+                <a class="social sc" href="#"><i class="fab fa-snapchat-square"></i></a>
+                <a class="social tt" href="#"><i class="fab fa-twitter-square"></i></a>
+                <a class="social yt" href="#"><i class="fab fa-youtube-square"></i></a>
+                <a class="social fb" href="#"><i class="fab fa-facebook-square"></i></a>    
+            </div>
         </div>
         <div class="sidebar">
             <a href="autorzy.php">
@@ -57,19 +57,7 @@
             </a>
         </div>
         <div class="main index">
-            <?php
-                require("conn.php");
-                require("login_system.php");
-                
-                
-                if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] = 1){
-                    
-                }
-                else{
-                    echo("<h1>Niezalogowany</h1>");
-                    header('Location: login.php');
-            }
-            ?>
+            
             <br/>
             
             <div class="slider">
@@ -89,16 +77,24 @@
             </div>
         </div>
         <div class="footer">
-            <div>© 2019 NieeeIksdeee</div>
+            <div>
+                <?php
+                    require("login_system.php");
+                    if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] == 1){
+                        echo("<div class='xd'>Administrator</div>");
+                    }
+                    else if(isset($_SESSION['Zalogowany']) && $_SESSION['Zalogowany'] == 0){
+                        echo("<div class='xd'>Użytkownik</div>");
+                    }
+                    else{
+                        echo("<h1>Niezalogowany</h1>");
+                        header('Location: login.php');
+                    }
+                    ?>
+            </div>
         </div>
 
     </div>
 </body>
 <script src="script.js"></script>
 </html>
-
-<!-- <img class="slider_item" src="images/img1.jpg">
-<img class="img" src="images/img2.jpeg">
-<img class="slider_item" src="images/img3.jpeg">
-<img class="slider_item" src="images/img4.jpg">
-<img class="slider_item" src="images/img5.jpg"> -->
