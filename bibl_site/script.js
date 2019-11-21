@@ -4,66 +4,135 @@ let slider_items = document.querySelector(".slider_items");
 let dot_menu = document.querySelector(".dot_menu");
 let logo = document.querySelector(".logo");
 
-let img1 = "images/img1.jpg";
-let img2 = "images/img2.jpeg";
-let img3 = "images/img3.jpeg";
-let img4 = "images/img4.jpg";
-let img5 = "images/img5.jpg";
+// ##################-Animacja-Logo-##################
 
-let logo1 = "bibl_logo.png";
-let logo2 = "bibl_logo2.png";
-let logo3 = "bibl_logo3.png";
-let logo4 = "bibl_logo4.png";
+    let l = 0;
+
+    let logo1 = "bibl_logo.png";
+    let logo2 = "bibl_logo2.png";
+    let logo3 = "bibl_logo3.png";
+    let logo4 = "bibl_logo4.png";
+
+    let logos = [logo4,logo3,logo2,logo1];
+
+    function logo_animate(){
+        if(l<logos.length-1){
+            l++;
+        }
+        else{
+            
+        }
+        logo.src=logos[l];
+    }
+    setInterval(logo_animate,500);
+
+// ##################-Animacja-Logo-##################
+
+// ##################-Slider-V1-##################
+
+// let i = 0;
+
+// let img1 = "images/img1.jpg";
+// let img2 = "images/img2.jpeg";
+// let img3 = "images/img3.jpeg";
+// let img4 = "images/img4.jpg";
+// let img5 = "images/img5.jpg";
+
+
+
+// let images = [img1,img2,img3,img4,img5]; 
+
+// let img = document.createElement("img");
+// img.classList.add("img");
+// img.src=images[0];
+// slider_items.appendChild(img);
+// img.classList.add("slide_r");
+
+
+
+// function next(){
+//    if(i<images.length-1){
+//         i++;
+//    }
+//    else{
+//        i=0;
+       
+//    }
+   
+//    img.src=images[i];
+   
+// }
+
+// function prew(){
+    
+//     if(i>0){
+//          i--;
+//     }
+//     else{
+//         i=images.length-1;
+        
+//     }
+//     img.src=images[i];
+//  }
+
+//  setInterval(next,5000);
+
+// ##################-Slider-V1-##################
+
+// ##################-Slider-V2-##################
+
+let i = 0;
+let x = 0;
+
+let img1 = document.createElement("img");
+img1.src = "images/img1.jpg";
+
+let img2 = document.createElement("img");
+img2.src = "images/img2.jpeg";
+
+let img3 = document.createElement("img");
+img3.src = "images/img3.jpeg";
+
+let img4 = document.createElement("img");
+img4.src = "images/img4.jpg";
+
+let img5 = document.createElement("img");
+img5.src = "images/img5.jpg";
 
 let images = [img1,img2,img3,img4,img5];
 
-let logos = [logo4,logo3,logo2,logo1];
-
-let l = 0;
-let i = 0;
-let x = 0;
- 
-let img = document.createElement("img");
-img.classList.add("img");
-img.src=images[0];
-slider_items.appendChild(img);
-img.classList.add("slide_r");
-
-function logo_animate(){
-    if(l<logos.length-1){
-         l++;
-    }
-    else{
-        
-    }
-    logo.src=logos[l];
- }
- setInterval(logo_animate,500);
+slider_items.appendChild(img1);
+images[i].classList.add("slide_r");
 
 function next(){
    if(i<images.length-1){
+        slider_items.removeChild(images[i]);
+        images[i].classList.remove("slide_r");
         i++;
+        images[i].classList.add("slide_r");
+        slider_items.appendChild(images[i]);
    }
    else{
        i=0;
        
-   }
-   
-   img.src=images[i];
-   
+   } 
 }
 
 function prew(){
     
     if(i>0){
-         i--;
+        slider_items.removeChild(images[i]);
+        images[i].classList.remove("slide_r");
+        i--;
+        images[i].classList.add("slide_l");
+        slider_items.appendChild(images[i]);
     }
     else{
         i=images.length-1;
         
     }
-    img.src=images[i];
- }
+    
+}
 
 images.forEach(function(e){  
     dot = document.createElement("span");
@@ -73,77 +142,12 @@ images.forEach(function(e){
     dot_menu.appendChild(dot);
     x++;
 })
- setInterval(next,5000);
+let dots = document.querySelectorAll(".dot");
+console.log(dots);
+//  setInterval(next,5000);
 
 
-// $right.addEventListener("click",function(){
-//     if($images[0].classList.contains("active")){
-//         $images[0].classList.remove("active");
-//         $images[0].classList.remove("slide_l");
-//         $images[1].classList.add("active");
-//         $images[1].classList.add("slide_r"); 
-//     }
-//     else if($images[1].classList.contains("active")){
-//         $images[1].classList.remove("active");
-//         $images[1].classList.remove("slide_r");
-//         $images[2].classList.add("active");
-//         $images[2].classList.add("slide_r");
-//     }
-//     else if($images[2].classList.contains("active")){
-//         $images[2].classList.remove("active");
-//         $images[2].classList.remove("slide_r");
-//         $images[3].classList.add("active");
-//         $images[3].classList.add("slide_r");
-//     }
-//     else if($images[3].classList.contains("active")){
-//         $images[3].classList.remove("active");
-//         $images[3].classList.remove("slide_r");
-//         $images[4].classList.add("active");
-//         $images[4].classList.add("slide_r");
-        
-//     }
-// });
-// $left.addEventListener("click",function(){
-//     if($images[4].classList.contains("active")){
-//         $images[4].classList.remove("active");
-//         $images[4].classList.remove("slide_r");
-//         $images[4].classList.remove("slide_l");
-//         $images[3].classList.add("active");
-//         $images[3].classList.add("slide_l");
-        
-//     }
-//     else if($images[3].classList.contains("active")){
-//         $images[3].classList.remove("active");
-//         $images[3].classList.remove("slide_l");
-//         $images[2].classList.add("active");
-//         $images[2].classList.add("slide_l");
-//     }
-//     else if($images[2].classList.contains("active")){
-//         $images[2].classList.remove("active");
-//         $images[2].classList.remove("slide_l");
-//         $images[1].classList.add("active");
-//         $images[1].classList.add("slide_l");
-//     }
-//     else if($images[1].classList.contains("active")){
-//         $images[1].classList.remove("active");
-//         $images[1].classList.remove("slide_l");
-//         $images[0].classList.add("active");
-//         $images[0].classList.add("slide_l");
-//     }
-// })
 
-// <div class="slider_item img_one">
-// <img class="img" src="images/img1.jpg">
-// </div>
-// <div class="slider_item img_two">
-// <img class="img" src="images/img2.jpeg">
-// </div>
-// <div class="slider_item img_three">
-// <img class="img" src="images/img3.jpeg">
-// </div>
-// <div class="slider_item img_four">
-// <img class="img" src="images/img4.jpg">
-// </div>
-// <div class="slider_item img_five">
-// <img class="img" src="images/img5.jpg">
-// </div>
+
+
+// ##################-Slider-V2-##################

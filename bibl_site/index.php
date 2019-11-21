@@ -64,7 +64,9 @@
                 <div class="button left" onclick="prew()">
                     <i class="fas fa-arrow-circle-left"></i>
                 </div>
-                <div class="slider_items"></div>
+                <div class="slider_items">
+
+                </div>
                 <div class="button right" onclick="next()">
                     <i class="fas fa-arrow-circle-right"></i>
                 </div>
