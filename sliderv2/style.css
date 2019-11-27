@@ -1,0 +1,106 @@
+body{
+    height: 100vh;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.header{
+    height: 15%;
+    width: 100%;
+    background: lightblue;
+}
+.sidebar{
+    height: 70%;
+    width: 30%;
+    background: lightcoral;
+}
+.addDiv{
+    height: 50px;
+    width: 50px;
+    background: chartreuse;
+    padding: 10px;
+}
+.main{
+    height: 70%;
+    width: 70%;
+    background: lightgreen;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-between;
+    
+    
+}
+.footer{
+    height: 15%;
+    width: 100%;
+    background: lightseagreen;
+}
+.button{
+    height: 10%;
+    width: 100%;
+    margin: 0;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button_left{
+    height: 80%;
+    width: 10%;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button_right{
+    height: 80%;
+    width: 10%;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    background: black;
+}
+.slideShow{
+    height: 100%;
+    width: 100%;
+    transition: all 200ms linear;
+}
+.img{
+    background: darkorchid;
+    border: solid 2px white;
+    height: 100%;
+    width: 100%;
+}
+.one{
+    background: url("img1.png");
+    background-size: 100%;
+
+}
+.two{
+    background: url("img2.png");
+    background-size: 100%;
+  
+}
+.three{
+    background: url("img3.png");
+    background-size: 100%;
+
+    
+}
+.four{
+    background: red;
+    background-size: 100%;
+
