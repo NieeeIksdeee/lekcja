@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="przelicznik">
+       Ilość zł: <input class="a" type="number" step="0.01" min="0.01"><br>
+       Waluta: 
+       <select class="waluta">
+            <option>usd</option>
+            <option>eur</option>
+       </select><br>
+       Cena 1$: <span class="dolar"></span><br>
+       <input type="submit" value="Przelicz" class="btn"><br>
+       <span class="wynik">0</span>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
